@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Identity;
 
 namespace CozaStore.Models;
 
-[Table("Usuario")]
-public class Usuário
+[Table("Usuário")]
+public class Usuario
 {
     [Key]
 

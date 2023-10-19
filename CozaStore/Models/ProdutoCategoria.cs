@@ -12,6 +12,7 @@ namespace CozaStore.Models;
        public int ProdutoId { get; set; }
        [ForeignKey("ProdutoId")]
        public Produto Produto { get; set; }
+       
        [Key, Column(Order = 2)]
        public int CategoriaId { get; set; }
        [ForeignKey("CategoriaId")]

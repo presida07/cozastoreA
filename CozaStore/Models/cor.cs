@@ -5,7 +5,7 @@ namespace CozaStore.Models;
 
 
 [Table("Cor")]
-    public class cor
+    public class Cor
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
