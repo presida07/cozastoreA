@@ -21,5 +21,5 @@ public class Carrinho
     public DateTime DataCadastro { get; set; } =  DateTime.Now; 
 
     [Display(Name = "Data de modificação")]
-    public DateTime? Datamodificacao { get; set; }
+    public DateTime? DataModificacao { get; set; }
 }

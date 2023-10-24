@@ -36,7 +36,7 @@ public class Produto
     [Column(TypeName = "decimal(8,2)")]
     [Required(ErrorMessage = "Informe o preço com desconto")]
 
-    public decimal Precodesconto { get; set; }
+    public decimal PrecoDesconto { get; set; }
 
     [Display( Name = "Produto em Destaque?")]
     public bool Destaque { get; set; }
@@ -45,7 +45,7 @@ public class Produto
     public decimal Peso { get; set; }
 
     [StringLength(30, ErrorMessage = "O material deve possuir no máximo 30 caracterrd")]
-    public string material { get; set; }
+    public string Material { get; set; }
 
     [Display(Name = "Dimensões")]
     [StringLength(30, ErrorMessage = "As dimensões deve possuir no máximo 30 caracateres")]

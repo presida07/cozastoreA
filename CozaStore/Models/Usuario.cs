@@ -13,7 +13,7 @@ public class Usuario
     public string UsuarioId { get; set; }
     
     [ForeignKey("UsuarioId")]
-    public IdentityUser Contausuario { get; set;}
+    public IdentityUser ContaUsuario { get; set;}
 
     [Required(ErrorMessage = "Informe o Nome")]
     [StringLength(60, ErrorMessage = "O Nome deve possuir no máximo 60 caracteres")]

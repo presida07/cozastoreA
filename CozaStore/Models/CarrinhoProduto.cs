@@ -23,7 +23,7 @@ public class CarrinhoProduto
     public DateTime DataCadastro { get; set; } =  DateTime.Now; 
 
     [Display(Name = "Data de modificação")]
-    public DateTime? Datamodificacao { get; set; }
+    public DateTime? DataModificacao { get; set; }
 
     [Display(Name = "Preço")]
     [Column(TypeName = "decimal(8,2)")]
@@ -34,7 +34,7 @@ public class CarrinhoProduto
     [Display(Name = "Preço com desconto")]
     [Column(TypeName = "decimal(8,2)")]
     [Required(ErrorMessage = "Informe o preço com desconto")]
-    public decimal Precodesconto { get; set; }
+    public decimal PrecoDesconto { get; set; }
 
     [Display(Name = "Qtde em Estoque")]
     [Required(ErrorMessage = "Informe a Qtde em Estoque")]

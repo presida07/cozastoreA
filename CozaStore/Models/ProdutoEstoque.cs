@@ -38,10 +38,10 @@ public class ProdutoEstoque
     [Display(Name = "Preço com desconto")]
     [Column(TypeName = "decimal(8,2)")]
     [Required(ErrorMessage = "Informe o preço com desconto")]
-    public decimal Precodesconto { get; set; }
+    public decimal PrecoDesconto { get; set; }
 
     [Display(Name = "Qtde")]
     [Required(ErrorMessage = "Informe a Qtde")]
-    public int Qtde { get; set; }
+    public int QtdeEstoque { get; set; }
 
 }
