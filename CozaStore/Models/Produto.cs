@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace CozaStore.Models;
-
 
 [Table("Produto")]
 public class Produto
@@ -12,10 +12,10 @@ public class Produto
     public int Id { get; set; }
 
     [Required(ErrorMessage = "Informe o Nome")]
-    [StringLength(60, ErrorMessage = "O Nome do produto deve possuir no máximo 60 caracteres")]
+    [StringLength(60, ErrorMessage = "O Nome deve possuir no máximo 60 caracteres")]
     public string Nome { get; set; }
-
-    [Display(Name = "Descrição resumida")]
+    
+    [Display(Name = "Descrição Resumida")]
     [StringLength(300, ErrorMessage = "A Descrição Resumida deve possuir no máximo 300 caracteres")]
     public string DescricaoResumida { get; set; }
 
@@ -28,27 +28,31 @@ public class Produto
 
     [Display(Name = "Preço")]
     [Column(TypeName = "decimal(8,2)")]
-    [Required(ErrorMessage = "Informe o preço de venda")]
-
+    [Required(ErrorMessage = "Informe o Preço de Venda")]
     public decimal Preco { get; set; }
-    
-    [Display(Name = "Preço com desconto")]
-    [Column(TypeName = "decimal(8,2)")]
-    [Required(ErrorMessage = "Informe o preço com desconto")]
 
+    [Display(Name = "Preço com Desconto")]
+    [Column(TypeName = "decimal(8,2)")]
+    [Required(ErrorMessage = "Informe o Preço com Desconto")]
     public decimal PrecoDesconto { get; set; }
 
-    [Display( Name = "Produto em Destaque?")]
+    [Display(Name = "Produto em Destaque?")]
     public bool Destaque { get; set; }
 
     [Column(TypeName = "decimal(6,3)")]
-    public decimal Peso { get; set; }
+    public decimal Peso { get; set; } = 0;
 
-    [StringLength(30, ErrorMessage = "O material deve possuir no máximo 30 caracterrd")]
+    [StringLength(30, ErrorMessage = "O Material deve possuir no máximo 30 caracteres")]
     public string Material { get; set; }
 
     [Display(Name = "Dimensões")]
-    [StringLength(30, ErrorMessage = "As dimensões deve possuir no máximo 30 caracateres")]
+    [StringLength(30, ErrorMessage = "As Dimensões deve possuir no máximo 30 caracteres")]
     public string Dimensao { get; set; }
+
+    public ICollection<ListaDesejo> Clientes { get; set; }
+    public ICollection<ProdutoAvaliacao> Avaliacoes { get; set; }
+    public ICollection<ProdutoCategoria> Categorias { get; set; }
+    public ICollection<ProdutoEstoque> Estoques { get; set; }
+    public ICollection<ProdutoTag> Tags { get; set; }
 
 }

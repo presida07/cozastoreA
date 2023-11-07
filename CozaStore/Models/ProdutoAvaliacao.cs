@@ -1,9 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace CozaStore.Models;
-
 
 [Table("ProdutoAvaliacao")]
 public class ProdutoAvaliacao
@@ -20,14 +18,13 @@ public class ProdutoAvaliacao
     public Usuario Usuario { get; set; }
 
     [Display(Name = "Avaliação")]
-    [Required(ErrorMessage = "Informe o Texto de Avaliação")]
+    [Required(ErrorMessage = "Informe o Texto da Avaliação")]
     [StringLength(300, ErrorMessage = "O Texto deve possuir no máximo 300 caracteres")]
     public string AvaliacaoTexto { get; set; }
 
-   [Display(Name = "Data da Avaliação")]
-    public DateTime AvaliacaoData { get; set; }
+    [Display(Name = "Data da Avaliação")]
+    public DateTime AvaliacaoData { get; set; } = DateTime.Now;
 
-   [Display(Name = "Nota de Produto")]
+    [Display(Name = "Nota do Produto")]
     public byte? ProdutoNota { get; set; }
-
 }

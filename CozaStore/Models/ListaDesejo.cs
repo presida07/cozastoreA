@@ -1,9 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace CozaStore.Models;
-
 
 [Table("ListaDesejo")]
 public class ListaDesejo
@@ -20,5 +18,5 @@ public class ListaDesejo
     public Usuario Usuario { get; set; }
 
     [Display(Name = "Data do Cadastro")]
-    public DateTime DataCadastro { get; set; } = DateTime.Now; 
+    public DateTime DataCadastro { get; set; } = DateTime.Now;
 }
